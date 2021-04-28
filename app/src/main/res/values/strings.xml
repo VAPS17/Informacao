@@ -1,8 +1,7 @@
 <resources>
     <string name="app_name">Informacao</string>
-    <string name="nome">Nome</string>
-    <string name="telefone">Telefone</string>
     <string name="idade">Idade</string>
+    <string name="nome">Nome</string>
     <string name="email">Email</string>
-    <string name="enviar">Enviar</string>
+    <string name="telefone">Telefone</string>
 </resources>
