@@ -16,4 +16,10 @@ class ShowInformation : AppCompatActivity() {
     val textViewEmail = findViewById<TextView>(R.id.textViewEmail)
     val textViewPhone = findViewById<TextView>(R.id.textViewPhone)
 
+    //todo: Guardar o conteúdo do "pacote" enviado numa variavel
+    val mesageName = intent.getStringArrayExtra(MainActivity.INFO_EXTRA_NAME)
+    val mesageAge = intent.getStringArrayExtra(MainActivity.INFO_EXTRA_AGE)
+    val mesageEmail = intent.getStringArrayExtra(MainActivity.INFO_EXTRA_EMAIL)
+    val mesagePhone = intent.getStringArrayExtra(MainActivity.INFO_EXTRA_PHONE)
+
 }
