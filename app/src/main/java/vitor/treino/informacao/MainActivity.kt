@@ -14,10 +14,10 @@ class MainActivity : AppCompatActivity() {
 
     //todo: Criação de variáveis constantes
     companion object{
-        val INFO_EXTRA_NAME = "NAME"
-        val INFO_EXTRA_AGE = "AGE"
-        val INFO_EXTRA_EMAIL = "EMAIL"
-        val INFO_EXTRA_PHONE = "PHONE"
+        const val INFO_EXTRA_NAME = "NAME"
+        const val INFO_EXTRA_AGE = "AGE"
+        const val INFO_EXTRA_EMAIL = "EMAIL"
+        const val INFO_EXTRA_PHONE = "PHONE"
     }
 
     //todo: Função do botão, com o id: "Button".
@@ -56,5 +56,8 @@ class MainActivity : AppCompatActivity() {
             putExtra(INFO_EXTRA_EMAIL, mesageEmail)
             putExtra(INFO_EXTRA_PHONE, mesagePhone)
         }
+
+        //todo: Enviar "pacote"
+        startActivity(intent)
     }
 }
