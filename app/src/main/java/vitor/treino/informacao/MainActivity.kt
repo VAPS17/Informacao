@@ -2,6 +2,7 @@ package vitor.treino.informacao
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.EditText
 
 class MainActivity : AppCompatActivity() {
@@ -11,7 +12,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     //todo: Função do botão, com o id: "Button".
-    fun sendInformation() {
+    fun sendInformation(view: View) {
 
         //todo: Encontrar os layouts de informação e incrementa los numa variável.
         val editTextName = findViewById<EditText>(R.id.EditTextName)
