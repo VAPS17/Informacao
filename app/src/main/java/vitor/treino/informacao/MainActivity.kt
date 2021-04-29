@@ -1,5 +1,6 @@
 package vitor.treino.informacao
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -9,6 +10,14 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+    }
+
+    //todo: Criação de variáveis constantes
+    companion object{
+        val INFO_EXTRA_NAME = "NAME"
+        val INFO_EXTRA_AGE = "AGE"
+        val INFO_EXTRA_EMAIL = "EMAIL"
+        val INFO_EXTRA_PHONE = "PHONE"
     }
 
     //todo: Função do botão, com o id: "Button".
@@ -40,6 +49,12 @@ class MainActivity : AppCompatActivity() {
             editTextPhone.error = "Invalid Phone."
         }
 
-        val intent = intent
+        //todo: Criação de um "pacote", para que a informação seja passada para outra actividade
+        val intent = Intent(this, ShowInformation::class.java).apply {
+            putExtra(INFO_EXTRA_NAME, mesageName)
+            putExtra(INFO_EXTRA_AGE, mesageAge)
+            putExtra(INFO_EXTRA_EMAIL, mesageEmail)
+            putExtra(INFO_EXTRA_PHONE, mesagePhone)
+        }
     }
 }

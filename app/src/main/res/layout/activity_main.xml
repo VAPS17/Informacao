@@ -18,7 +18,7 @@
             android:id="@+id/EditTextName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/nome" />
+            android:hint="@string/name" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -33,7 +33,7 @@
             android:id="@+id/EditTextAge"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/idade" />
+            android:hint="@string/age" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -63,7 +63,7 @@
             android:id="@+id/EditTextPhone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/telefone" />
+            android:hint="@string/phone" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
