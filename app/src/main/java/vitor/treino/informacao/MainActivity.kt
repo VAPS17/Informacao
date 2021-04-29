@@ -2,9 +2,7 @@ package vitor.treino.informacao
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.widget.EditText
-import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -13,33 +11,34 @@ class MainActivity : AppCompatActivity() {
     }
 
     //todo: Função do botão, com o id: "Button".
-    fun sendInformation(view: View) {
+    fun sendInformation() {
 
         //todo: Encontrar os layouts de informação e incrementa los numa variável.
-        val EditTextName = findViewById<EditText>(R.id.EditTextName)
-        val EditTextAge = findViewById<EditText>(R.id.EditTextAge)
-        val EditTextEmail = findViewById<EditText>(R.id.EditTextEmail)
-        val EditTextPhone = findViewById<EditText>(R.id.EditTextPhone)
+        val editTextName = findViewById<EditText>(R.id.EditTextName)
+        val editTextAge = findViewById<EditText>(R.id.EditTextAge)
+        val editTextEmail = findViewById<EditText>(R.id.EditTextEmail)
+        val editTextPhone = findViewById<EditText>(R.id.EditTextPhone)
 
         //todo: Guardar o conteúdo do layout em forma de texto.
-        val mesageName = EditTextName.text.toString()
-        val mesageAge = EditTextAge.text.toString()
-        val mesageEmail = EditTextEmail.text.toString()
-        val mesagePhone = EditTextPhone.text.toString()
+        val mesageName = editTextName.text.toString()
+        val mesageAge = editTextAge.text.toString()
+        val mesageEmail = editTextEmail.text.toString()
+        val mesagePhone = editTextPhone.text.toString()
 
         //todo: Validação do texto nas layouts.
         if (mesageName.isBlank() ) {
-            EditTextName.error = "Invalid Name."
+            editTextName.error = "Invalid Name."
         }
         if(mesageAge.isBlank()){
-            EditTextAge.error = "Invalid Age."
+            editTextAge.error = "Invalid Age."
         }
         if(mesageEmail.isBlank()){
-            EditTextEmail.error = "Invalid Email."
+            editTextEmail.error = "Invalid Email."
         }
         if(mesagePhone.isBlank()){
-            EditTextPhone.error = "Invalid Phone."
+            editTextPhone.error = "Invalid Phone."
         }
 
+        val intent = intent
     }
 }
